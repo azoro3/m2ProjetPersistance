@@ -3,10 +3,10 @@
   <persistence-unit name="fr.ul.m2_m2ProjetPersistance_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.99.100:32768/postgres"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.99.100:32768/tpPersistance"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.password" value="postgres"/>
       <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
     </properties>
   </persistence-unit>

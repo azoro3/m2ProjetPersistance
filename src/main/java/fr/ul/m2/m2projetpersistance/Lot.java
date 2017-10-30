@@ -2,6 +2,9 @@ import java.util.Date;
 import java.util.Vector;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 @Entity
 public abstract class Lot {
         @Id
@@ -13,6 +16,9 @@ public abstract class Lot {
 	private String coutReel;
 	private Date dateFinReel;
 	public Entreprise responsable;
+        @OneToMany(mappedBy="Entreprise")
 	public Vector<Entreprise> realise = new Vector<Entreprise>();
-	public Projet projet_;
+        @ManyToOne
+        @JoinColumn(name="refProjet")
+	public Projet projet;
 }
